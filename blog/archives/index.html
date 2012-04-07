@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="Blog Archive 2012 A new blog
-Apr 07 2012 posted in information Recent Posts A new blog GitHub Repos Status updating... @cbetta on GitHub $.domReady( &hellip;">
+Apr 07 2012 posted in information Recent Posts A new blog Latest Tweets Status updating... $.domReady(function(){ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -33,13 +33,15 @@ Apr 07 2012 posted in information Recent Posts A new blog GitHub Repos Status up
 
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
+<body    class="collapse-sidebar sidebar-footer" >
+  
+    <header role="banner"><hgroup>
   <h1><a href="/">Betta Coding</a></h1>
   
 </hgroup>
 
 </header>
+  
   <div id="main">
     <div id="content">
       <div>
@@ -90,6 +92,23 @@ Apr 07 2012 posted in information Recent Posts A new blog GitHub Repos Status up
 </section>
 
 <section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("cbetta", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/cbetta" class="twitter-follow-button" data-show-count="false">Follow @cbetta</a>
+  
+</section>
+
+
+<section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
     <li class="loading">Status updating...</li>
@@ -116,23 +135,6 @@ Apr 07 2012 posted in information Recent Posts A new blog GitHub Repos Status up
     });
   </script>
   <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("cbetta", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/cbetta" class="twitter-follow-button" data-show-count="false">Follow @cbetta</a>
-  
 </section>
 
 
