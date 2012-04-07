@@ -4,7 +4,7 @@
   <title><![CDATA[Category: information | Betta Coding]]></title>
   <link href="http://cbetta.github.com/blog/categories/information/atom.xml" rel="self"/>
   <link href="http://cbetta.github.com/"/>
-  <updated>2012-04-07T21:02:05+01:00</updated>
+  <updated>2012-04-07T21:59:10+01:00</updated>
   <id>http://cbetta.github.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
@@ -18,23 +18,16 @@
     <link href="http://cbetta.github.com/blog/2012/04/07/a-new-blog/"/>
     <updated>2012-04-07T15:17:00+01:00</updated>
     <id>http://cbetta.github.com/blog/2012/04/07/a-new-blog</id>
-    <content type="html"><![CDATA[<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+    <content type="html"><![CDATA[<p>It has been a while since I last blogged, and to be fair I've been kinda busy, but I also was frustrated with my old blog. It was bloated and heavy to load, all mainly due to Wordpress and Site5's shared hosting. Wordpress started as a nice blogging platform but lately it has been pissing me off (more on this), and I realised that running a whole PHP script for pages that barely ever change is stupid.</p>
 
 <!-- more -->
 
 
-<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.</p>
+<p>So here is the new blog. The old one is still available <a href="http://blog.cristianobetta.com/">here</a> as a static HTML archive (hence why it loads so fast).</p>
 
-<p><div><script src='https://gist.github.com/996818.js?file='></script>
-<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
-  it &quot;should generate a sprite from nested folders&quot; do
-    css = render &lt;&lt;-SCSS
--     @import &quot;nested/*.png&quot;;
-+     @import &quot;nested/**/*.png&quot;;
-      @include all-nested-sprites;
-    SCSS
-    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
-</p>
+<p>This new blog is built using <a href="http://octopress.org">Octopress</a>, which is a "blog aware static site generator". Basically what it does is convert a whole folder of template files and blog posts written in <a href="http://daringfireball.net/projects/markdown/">MarkDown</a> into a whole folder of HTML, CSS, and Javascript. I've been using a few simple frameworks like <a href="http://nanoc.stoneship.org/">Nanoc</a> and <a href="https://github.com/mojombo/jekyll">Jekyll</a> for work and event management recently and I loved the speed. No database and no server side scripting results in super fast load times, combing that with the hosting on <a href="http://pages.github.com">Github</a> (see here to learn how to do this yourself) makes it even faster.</p>
+
+<p>But let's quit talking about the technical details of my blog, or maybe not. I definitely want to share some more techie things here, highlight some of the code I personally write, workflows we use at <a href="http://emberads.com/">EmberAds</a>, and software I love using. Although it's fun to blog about anything at random, I rather make this blog a bit more topical (hence the cheesy title).</p>
 ]]></content>
   </entry>
   
