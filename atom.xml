@@ -4,7 +4,7 @@
   <title><![CDATA[Betta Coding]]></title>
   <link href="http://cristianobetta.com/atom.xml" rel="self"/>
   <link href="http://cristianobetta.com/"/>
-  <updated>2012-04-09T00:05:58+01:00</updated>
+  <updated>2012-04-10T15:40:43+01:00</updated>
   <id>http://cristianobetta.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Hack Day Manifesto]]></title>
+    <link href="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/"/>
+    <updated>2012-04-10T15:30:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto</id>
+    <content type="html"><![CDATA[<p>One of my friends, <a href="http://artisanofcode.com/">Dan</a>, started a document called <a href="http://hackdaymanifesto.com/">&#8220;The Hack Day Manifesto&#8221;</a> on the #GeeksOfLondon IRC channel a few days back. With the help of our community we managed to update it to a full document and it&#8217;s now live.</p>
+
+<p>It&#8217;s a must read if you ever plan to run a hack day or hackathon.</p>
+
+<p>It&#8217;s already signed by quite a few hackday organisers including the GeeksOfLondon team and you can add your own name by simply <a href="https://github.com/hackdaymanifesto/hackdaymanifesto.github.com/">forking</a>, adding your name, and making a pull request.</p>
+
+<p><img class="center" src="http://cristianobetta.com/images/blog/2012/thehackdaymanifesto.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A new blog]]></title>
