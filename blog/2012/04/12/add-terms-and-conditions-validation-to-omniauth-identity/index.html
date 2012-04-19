@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Hack Day Manifesto  ·  Betta Coding</title>
+  <title>Add terms & conditions validation to Omniauth Identity  ·  Betta Coding</title>
   <meta name="author" content="Cristiano Betta">
 
   
-  <meta name="description" content="One of my friends, Dan, started a document called &#8220;The Hack Day Manifesto&#8221; on the #GeeksOfLondon IRC channel a few days back. With the &hellip;">
+  <meta name="description" content="Omniauth Identity is a great identity provide that shipped with Omniauth 1.0 it can be a bit simple at times. I wanted to add a simple terms and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto">
+  <link rel="canonical" href="http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -48,7 +48,7 @@
   
   <header>
     
-      <h1 class="entry-title">The Hack Day Manifesto</h1>
+      <h1 class="entry-title">Add terms & conditions validation to Omniauth Identity</h1>
     
     
       <p class="meta">
@@ -64,20 +64,60 @@
   
 
 
-<time datetime="2012-04-10T15:30:00+01:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
+<time datetime="2012-04-12T00:32:00+01:00" pubdate data-updated="true">Apr 12<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>One of my friends, <a href="http://artisanofcode.com/">Dan</a>, started a document called <a href="http://hackdaymanifesto.com/">&#8220;The Hack Day Manifesto&#8221;</a> on the #GeeksOfLondon IRC channel a few days back. With the help of our community we managed to update it to a full document and it&#8217;s now live.</p>
+<div class="entry-content"><div class="entry-content"><p><a href="https://github.com/intridea/omniauth-identity">Omniauth Identity</a> is a great identity provide that shipped with Omniauth 1.0 it can be a bit simple at times. I wanted to add a simple terms and conditions check on signup to my registration form and this is what I came up with.</p>
 
-<p>It&#8217;s a must read if you ever plan to run a hack day or hackathon.</p>
+<p>For this example I assume you already have a Omniauth Identity setup much like explained in <a href="http://railscasts.com/episodes/304-omniauth-identity">this Railscast</a>.</p>
 
-<p>It&#8217;s already signed by quite a few hackday organisers including the GeeksOfLondon team and you can add your own name by simply <a href="https://github.com/hackdaymanifesto/hackdaymanifesto.github.com/">forking</a>, adding your name, and making a pull request.</p>
+<h2>Step 1 - app/models/identity.rb</h2>
 
-<p><img class="center" src="/images/blog/2012/thehackdaymanifesto.png"></p>
+<p>Add a checkbox to your form.</p>
+
+<div><script src='https://gist.github.com/2368233.js?file='></script>
+<noscript><pre><code>&lt;div class=&quot;field&quot;&gt;
+  &lt;%= label_tag :conditions %&gt;&lt;br&gt;
+  &lt;%= check_box_tag :conditions %&gt;
+&lt;/div&gt;</code></pre></noscript></div>
+
+
+<h2>Step 2 - app/views/identities/new.html.erb</h2>
+
+<p>Add a attribute to your identity model and check for it to be set.</p>
+
+<div><script src='https://gist.github.com/2368263.js?file='></script>
+<noscript><pre><code>class Identity &lt; OmniAuth::Identity::Models::ActiveRecord
+
+  ...
+
+  validates :conditions, acceptance: true, allow_nil: false, on: :create
+  attr_accessor :conditions
+
+  ...
+
+end</code></pre></noscript></div>
+
+
+<p>You should really only check this on create, otherwise this validation will run every time the identity gets updated, unless of course you decide to store the <code>conditions</code> value in the database.</p>
+
+<h2>Step 3 - config/initializers/omniauth.rb</h2>
+
+<p>This is the one that took me the longest to figure out. You need to tell Omniauth Identity what fields to look for on signup.</p>
+
+<div><script src='https://gist.github.com/2368322.js?file='></script>
+<noscript><pre><code>Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :identity, fields: [:email, :conditions]
+end</code></pre></noscript></div>
+
+
+<p>In the same way you can add a user&#8217;s name and other details, though I highly recommend you don&#8217;t store those on the <code>Identity</code> but on the <code>User</code> model.</p>
+</div>
+
 </div>
 
 
@@ -100,12 +140,12 @@
   
 
 
-<time datetime="2012-04-10T15:30:00+01:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
+<time datetime="2012-04-12T00:32:00+01:00" pubdate data-updated="true">Apr 12<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/events/'>events</a>
+    <a class='category' href='/blog/categories/omniauth/'>omniauth</a>, <a class='category' href='/blog/categories/rails/'>rails</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
   
 </span>
 
@@ -114,7 +154,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/" data-via="cbetta" data-counturl="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/" data-via="cbetta" data-counturl="http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/" >Tweet</a>
   
   
   
@@ -123,10 +163,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/04/07/a-new-blog/" title="Previous Post: A new blog">&laquo; A new blog</a>
+        <a class="basic-alignment left" href="/blog/2012/04/10/the-hackday-manifesto/" title="Previous Post: The Hack Day Manifesto">&laquo; The Hack Day Manifesto</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/" title="Next Post: Add terms & conditions validation to Omniauth Identity">Add terms & conditions validation to Omniauth Identity &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/04/19/tech-on-my-radar/" title="Next Post: Tech on my radar">Tech on my radar &raquo;</a>
       
     </p>
   </footer>
@@ -237,8 +277,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/';
-        var disqus_url = 'http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/';
+        var disqus_identifier = 'http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/';
+        var disqus_url = 'http://cristianobetta.com/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/';
         var disqus_script = 'embed.js';
       
     (function () {
