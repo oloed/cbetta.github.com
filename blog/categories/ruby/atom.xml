@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: information | Betta Coding]]></title>
-  <link href="http://cristianobetta.com/blog/categories/information/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ruby | Betta Coding]]></title>
+  <link href="http://cristianobetta.com/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://cristianobetta.com/"/>
   <updated>2012-04-20T00:08:45+01:00</updated>
   <id>http://cristianobetta.com/</id>
@@ -39,24 +39,6 @@
 <li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I've been working on a blog post around mainly to inspire regular bloggers that you don't need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A new blog]]></title>
-    <link href="http://cristianobetta.com/blog/2012/04/07/a-new-blog/"/>
-    <updated>2012-04-07T15:17:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/04/07/a-new-blog</id>
-    <content type="html"><![CDATA[<p>It has been a while since I last blogged, and to be fair I've been kinda busy, but I also was frustrated with my old blog. It was bloated and heavy to load, all mainly due to Wordpress and Site5's shared hosting. Wordpress started as a nice blogging platform but lately it has been pissing me off (more on this), and I realised that running a whole PHP script for pages that barely ever change is stupid.</p>
-
-<!-- more -->
-
-
-<p>So here is the new blog. The old one is still available <a href="http://blog.cristianobetta.com/">here</a> as a static HTML archive (hence why it loads so fast).</p>
-
-<p>This new blog is built using <a href="http://octopress.org">Octopress</a>, which is a "blog aware static site generator". Basically what it does is convert a whole folder of template files and blog posts written in <a href="http://daringfireball.net/projects/markdown/">MarkDown</a> into a whole folder of HTML, CSS, and Javascript. I've been using a few simple frameworks like <a href="http://nanoc.stoneship.org/">Nanoc</a> and <a href="https://github.com/mojombo/jekyll">Jekyll</a> for work and event management recently and I loved the speed. No database and no server side scripting results in super fast load times, combing that with the hosting on <a href="http://pages.github.com">Github</a> (see here to learn how to do this yourself) makes it even faster.</p>
-
-<p>But let's quit talking about the technical details of my blog, or maybe not. I definitely want to share some more techie things here, highlight some of the code I personally write, workflows we use at <a href="http://emberads.com/">EmberAds</a>, and software I love using. Although it's fun to blog about anything at random, I rather make this blog a bit more topical (hence the cheesy title).</p>
 ]]></content>
   </entry>
   

@@ -9,7 +9,7 @@
   <meta name="author" content="Cristiano Betta">
 
   
-  <meta name="description" content="One of my friends, Dan, started a document called &#8220;The Hack Day Manifesto&#8221; on the #GeeksOfLondon IRC channel a few days back. With the &hellip;">
+  <meta name="description" content="Here are just some interesting gems and other software that have caught my attention recently: oh-my-zsh makes it easy to use zshell as a replacement &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -45,6 +45,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/04/19/tech-on-my-radar/">Tech on my radar</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-19T23:19:00+01:00" pubdate data-updated="true">Apr 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Here are just some interesting gems and other software that have caught my attention recently:</p>
+
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> makes it easy to use zshell as a replacement for bash on OS X. It is very easy to install and comes with a whole bunch of useful plugins. I&#8217;ve only really dived half into it but already feel like it&#8217;s been making my console better. I personally love how it shows the Git branch I&#8217;m working on at the moment.</li>
+<li><a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom Filters</a> are a very cool way of doing a quick and space efficient lookup if an item exists in a set. It&#8217;s used by databases and caches, and Google uses it for their Save Browsing service. There&#8217;s some cool <a href="https://github.com/igrigorik/bloomfilter-rb">ruby gems</a> that make it easy to use them and I already have an idea where to deploy them next.</li>
+<li><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How Github uses Github</a> is pretty much how we use Github at EmberAds. The more we do it the more I see the benefits especially:
+
+<ul>
+<li>We work asynchronously</li>
+<li>We use the hell out of Campfire</li>
+<li>Master is always deployable</li>
+<li>Pull Requests are our code reviews, requests for comments, and discussion boards.</li>
+<li>Other apps are great for prioritising stuff, but we honestly barely touched BaseCamp in weeks.</li>
+</ul>
+</li>
+<li><a href="https://github.com/EmberAds/cuuid">Fast UUID generation</a> is something we needed at EmberAds seeing as we use UUIDs everywhere and most of the Ruby gems were rather slow.    <a href="http://caius.name">Caius</a> cooked up a Ruby gem that uses a native C library which in our simple benchmarks spit out UUIDs about 6x faster.</li>
+<li>On that note, <a href="https://github.com/EmberAds/acts_as_uuid">acts_as_uuid</a> is what we use to store UUIDs on our models in Postgres.</li>
+<li><a href="https://github.com/ondrejbartas/rake-progressbar">Rake progressbar</a> makes it easier for me to understand if I can go and make a brew or not when some of my rake tasks are running.</li>
+<li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I&#8217;ve been working on a blog post around mainly to inspire regular bloggers that you don&#8217;t need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -147,6 +203,10 @@
 
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/04/19/tech-on-my-radar/">Tech on my radar</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/04/10/the-hackday-manifesto/">The Hack Day Manifesto</a>

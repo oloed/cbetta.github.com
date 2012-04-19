@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>The Hack Day Manifesto  ·  Betta Coding</title>
+  <title>Tech on my radar  ·  Betta Coding</title>
   <meta name="author" content="Cristiano Betta">
 
   
-  <meta name="description" content="One of my friends, Dan, started a document called &#8220;The Hack Day Manifesto&#8221; on the #GeeksOfLondon IRC channel a few days back. With the &hellip;">
+  <meta name="description" content="Here are just some interesting gems and other software that have caught my attention recently: oh-my-zsh makes it easy to use zshell as a replacement &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto">
+  <link rel="canonical" href="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -48,7 +48,7 @@
   
   <header>
     
-      <h1 class="entry-title">The Hack Day Manifesto</h1>
+      <h1 class="entry-title">Tech on my radar</h1>
     
     
       <p class="meta">
@@ -64,20 +64,34 @@
   
 
 
-<time datetime="2012-04-10T15:30:00+01:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
+<time datetime="2012-04-19T23:19:00+01:00" pubdate data-updated="true">Apr 19<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>One of my friends, <a href="http://artisanofcode.com/">Dan</a>, started a document called <a href="http://hackdaymanifesto.com/">&#8220;The Hack Day Manifesto&#8221;</a> on the #GeeksOfLondon IRC channel a few days back. With the help of our community we managed to update it to a full document and it&#8217;s now live.</p>
+<div class="entry-content"><p>Here are just some interesting gems and other software that have caught my attention recently:</p>
 
-<p>It&#8217;s a must read if you ever plan to run a hack day or hackathon.</p>
+<ul>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> makes it easy to use zshell as a replacement for bash on OS X. It is very easy to install and comes with a whole bunch of useful plugins. I&#8217;ve only really dived half into it but already feel like it&#8217;s been making my console better. I personally love how it shows the Git branch I&#8217;m working on at the moment.</li>
+<li><a href="http://en.wikipedia.org/wiki/Bloom_filter">Bloom Filters</a> are a very cool way of doing a quick and space efficient lookup if an item exists in a set. It&#8217;s used by databases and caches, and Google uses it for their Save Browsing service. There&#8217;s some cool <a href="https://github.com/igrigorik/bloomfilter-rb">ruby gems</a> that make it easy to use them and I already have an idea where to deploy them next.</li>
+<li><a href="http://zachholman.com/talk/how-github-uses-github-to-build-github">How Github uses Github</a> is pretty much how we use Github at EmberAds. The more we do it the more I see the benefits especially:
 
-<p>It&#8217;s already signed by quite a few hackday organisers including the GeeksOfLondon team and you can add your own name by simply <a href="https://github.com/hackdaymanifesto/hackdaymanifesto.github.com/">forking</a>, adding your name, and making a pull request.</p>
+<ul>
+<li>We work asynchronously</li>
+<li>We use the hell out of Campfire</li>
+<li>Master is always deployable</li>
+<li>Pull Requests are our code reviews, requests for comments, and discussion boards.</li>
+<li>Other apps are great for prioritising stuff, but we honestly barely touched BaseCamp in weeks.</li>
+</ul>
+</li>
+<li><a href="https://github.com/EmberAds/cuuid">Fast UUID generation</a> is something we needed at EmberAds seeing as we use UUIDs everywhere and most of the Ruby gems were rather slow.    <a href="http://caius.name">Caius</a> cooked up a Ruby gem that uses a native C library which in our simple benchmarks spit out UUIDs about 6x faster.</li>
+<li>On that note, <a href="https://github.com/EmberAds/acts_as_uuid">acts_as_uuid</a> is what we use to store UUIDs on our models in Postgres.</li>
+<li><a href="https://github.com/ondrejbartas/rake-progressbar">Rake progressbar</a> makes it easier for me to understand if I can go and make a brew or not when some of my rake tasks are running.</li>
+<li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I&#8217;ve been working on a blog post around mainly to inspire regular bloggers that you don&#8217;t need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
+</ul>
 
-<p><img class="center" src="/images/blog/2012/thehackdaymanifesto.png"></p>
 </div>
 
 
@@ -100,12 +114,12 @@
   
 
 
-<time datetime="2012-04-10T15:30:00+01:00" pubdate data-updated="true">Apr 10<span>th</span>, 2012</time>
+<time datetime="2012-04-19T23:19:00+01:00" pubdate data-updated="true">Apr 19<span>th</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/events/'>events</a>
+    <a class='category' href='/blog/categories/information/'>information</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>
   
 </span>
 
@@ -114,7 +128,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/" data-via="cbetta" data-counturl="http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/" data-via="cbetta" data-counturl="http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/" >Tweet</a>
   
   
   
@@ -123,10 +137,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/04/07/a-new-blog/" title="Previous Post: A new blog">&laquo; A new blog</a>
+        <a class="basic-alignment left" href="/blog/2012/04/10/the-hackday-manifesto/" title="Previous Post: The Hack Day Manifesto">&laquo; The Hack Day Manifesto</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/04/19/tech-on-my-radar/" title="Next Post: Tech on my radar">Tech on my radar &raquo;</a>
       
     </p>
   </footer>
@@ -233,8 +245,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/';
-        var disqus_url = 'http://cristianobetta.com/blog/2012/04/10/the-hackday-manifesto/';
+        var disqus_identifier = 'http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/';
+        var disqus_url = 'http://cristianobetta.com/blog/2012/04/19/tech-on-my-radar/';
         var disqus_script = 'embed.js';
       
     (function () {
