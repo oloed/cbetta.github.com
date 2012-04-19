@@ -4,7 +4,7 @@
   <title><![CDATA[Betta Coding]]></title>
   <link href="http://cristianobetta.com/atom.xml" rel="self"/>
   <link href="http://cristianobetta.com/"/>
-  <updated>2012-04-20T00:08:45+01:00</updated>
+  <updated>2012-04-20T00:11:53+01:00</updated>
   <id>http://cristianobetta.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
@@ -30,13 +30,13 @@
 <li>We use the hell out of Campfire</li>
 <li>Master is always deployable</li>
 <li>Pull Requests are our code reviews, requests for comments, and discussion boards.</li>
-<li>Other apps are great for prioritising stuff, but we honestly barely touched BaseCamp in weeks.</li>
+<li>Other apps have great features like prioritising stuff. But honestly, we have barely touched BaseCamp in weeks.</li>
 </ul>
 </li>
 <li><a href="https://github.com/EmberAds/cuuid">Fast UUID generation</a> is something we needed at EmberAds seeing as we use UUIDs everywhere and most of the Ruby gems were rather slow.    <a href="http://caius.name">Caius</a> cooked up a Ruby gem that uses a native C library which in our simple benchmarks spit out UUIDs about 6x faster.</li>
 <li>On that note, <a href="https://github.com/EmberAds/acts_as_uuid">acts_as_uuid</a> is what we use to store UUIDs on our models in Postgres.</li>
 <li><a href="https://github.com/ondrejbartas/rake-progressbar">Rake progressbar</a> makes it easier for me to understand if I can go and make a brew or not when some of my rake tasks are running.</li>
-<li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I&#8217;ve been working on a blog post around mainly to inspire regular bloggers that you don&#8217;t need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
+<li>And finally, static site generators like <a href="http://nanoc.stoneship.org/">Nanoc</a>, <a href="https://github.com/mojombo/jekyll">Jekyll</a>, and <a href="http://octopress.org/">Octopress</a> (used on this site) have been really catching my eye lately. Mainly because of the security and scaling implications. I&#8217;ve been working on a blog post on this, mainly to inspire regular bloggers that you don&#8217;t need a big server and a massive database to render a Wordpress site that will load slow as hell regardless.</li>
 </ul>
 
 ]]></content>
