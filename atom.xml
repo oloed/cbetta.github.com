@@ -4,7 +4,7 @@
   <title><![CDATA[Betta Coding]]></title>
   <link href="http://cristianobetta.com/atom.xml" rel="self"/>
   <link href="http://cristianobetta.com/"/>
-  <updated>2012-05-08T14:35:42+01:00</updated>
+  <updated>2012-05-08T14:38:59+01:00</updated>
   <id>http://cristianobetta.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[OpenCodeCamp - Where the best of HackDays and BarCamps come together]]></title>
-    <link href="http://cristianobetta.com/blog/2012/05/08/codecamp-where-the-best-of-hackdays-and-barcamps-come-together/"/>
+    <link href="http://cristianobetta.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together/"/>
     <updated>2012-05-08T12:18:00+01:00</updated>
-    <id>http://cristianobetta.com/blog/2012/05/08/codecamp-where-the-best-of-hackdays-and-barcamps-come-together</id>
+    <id>http://cristianobetta.com/blog/2012/05/08/opencodecamp-where-the-best-of-hackdays-and-barcamps-come-together</id>
     <content type="html"><![CDATA[<h3>tl;dr</h3>
 
 <p>I want to run a new kind of event: <strong>OpenCodeCamp</strong> (working title). OpenCodeCamp should be an event that promotes knowledge sharing and skills swapping amongst developers of any age or level of experience. It should be free of commercialism, competition, sexism, racism, age-ism and accessible to developers of any seniority.</p>
