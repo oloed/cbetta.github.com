@@ -142,25 +142,12 @@
 
 <p>But lately I&#8217;ve been noticing a little trend. I was at <a href="http://www.gamehack.co.uk/">GameHack</a> yesterday and I had come to have a fun weekend to play with some APIs, maybe play with some WebGL libraries, and get an idea of how game development works. I am not a game developer and don&#8217;t intend to be one, but I always enjoy learning new things.</p>
 
-<p>Much like the most recent <a href="http://musichackday.org/">MusicHackDay</a> London though, GameHack was a lot more serious than I had anticipated. Where the first MusicHackDay was mainly web developers trying to explore music APIs, the latest one mainly had people from the (online) music industry participating in teams, working with APIs and technologies they were already well practiced in.</p>
-
-<p>I felt out of my depth at MusicHackDay and GameHack. To clarify: I don&#8217;t think this is their fault. The events are probably great for people from the relevant industries. So maybe I&#8217;ve fallen into the expectation that my existing skills will always get me somewhere at a HackDay, or maybe I&#8217;m disappointed that with all the skills I picked up since 2007 I&#8217;m still out of my depth when it comes to hardware, music, video graphics, and many other skills.</p>
-
-<p>Maybe I also miss HackDays where the variety on offer is so wide that there&#8217;s always something for someone to learn and explore, and always someone interesting to talk to and learn from. Or maybe I miss HackDays that aren&#8217;t always about winning but more about sharing.</p>
-
-<p><strong>In the end, when a HackDay has so much great talent from an industry competing to out do each other (rather than sharing), the newbies tend to not be able to pick up any new skills, let alone be motivated to try.</strong></p>
-
-<p>I think it&#8217;s time we look back at how HackDays were ran in 2006/2007 and evaluate what we sacrificed since. I would love to see some more events that are purely focussed around sharing, not competing.</p>
-
-<p>Inherently to me is the wording around these events. A lot of these events talk about <strong>apps</strong>, and offer rewards to <strong>continue work on the product</strong>, and call the HackDay a <strong>hackathon</strong>. All of this signals to me that it&#8217;s more about a sprint to produce the most commercially viable bootstrapped product, rather than a camp to share and learn how to make better technology and produce better code.</p>
-
-<p>I would love for someone to run a HackDay that&#8217;s more based on the Open Source model than the App Store model. A HackDay that rewards sharing, not competing. An event that&#8217;s ran by the community, for the community, not by this cool new startup that would like to push their API in your face.</p>
-
-<p>Maybe I will help run this HackDay myself soon. I&#8217;ve been running with the idea of an OpenSource HackDay for a while but am slightly occupied between EmberAds, and some of the upcoming GeeksOfLondon events.</p>
-
-<p>Let me know if you think this would be a good idea, and let me know what you think an event like that would look like.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/29/what-i-miss-about-hackdays-dot-dot-dot/">Read more &rarr;</a>
+    </footer>
   
 
 
@@ -264,41 +251,12 @@
   &lt;%= check_box_tag :conditions %&gt;
 &lt;/div&gt;</code></pre></noscript></div>
 
-
-<h2>Step 2 - app/views/identities/new.html.erb</h2>
-
-<p>Add a attribute to your identity model and check for it to be set.</p>
-
-<div><script src='https://gist.github.com/2368263.js?file='></script>
-<noscript><pre><code>class Identity &lt; OmniAuth::Identity::Models::ActiveRecord
-
-  ...
-
-  validates :conditions, acceptance: true, allow_nil: false, on: :create
-  attr_accessor :conditions
-
-  ...
-
-end</code></pre></noscript></div>
-
-
-<p>You should really only check this on create, otherwise this validation will run every time the identity gets updated, unless of course you decide to store the <code>conditions</code> value in the database.</p>
-
-<h2>Step 3 - config/initializers/omniauth.rb</h2>
-
-<p>This is the one that took me the longest to figure out. You need to tell Omniauth Identity what fields to look for on signup.</p>
-
-<div><script src='https://gist.github.com/2368322.js?file='></script>
-<noscript><pre><code>Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :identity, fields: [:email, :conditions]
-end</code></pre></noscript></div>
-
-
-<p>In the same way you can add a user&#8217;s name and other details, though I highly recommend you don&#8217;t store those on the <code>Identity</code> but on the <code>User</code> model.</p>
-</div>
-
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2012/04/12/add-terms-and-conditions-validation-to-omniauth-identity/">Read more &rarr;</a>
+    </footer>
   
 
 
