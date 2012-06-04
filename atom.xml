@@ -4,7 +4,7 @@
   <title><![CDATA[Betta Coding]]></title>
   <link href="http://cristianobetta.com/atom.xml" rel="self"/>
   <link href="http://cristianobetta.com/"/>
-  <updated>2012-05-18T14:38:47+01:00</updated>
+  <updated>2012-06-04T12:56:26+01:00</updated>
   <id>http://cristianobetta.com/</id>
   <author>
     <name><![CDATA[Cristiano Betta]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[On PhoneGap/Cordova and cross platform mobile development]]></title>
+    <link href="http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development/"/>
+    <updated>2012-06-04T12:34:00+01:00</updated>
+    <id>http://cristianobetta.com/blog/2012/06/04/on-phonegap-slash-cordova-and-cross-platform-mobile-development</id>
+    <content type="html"><![CDATA[<p>So last weekend I was at <a href="http://overtheair.org/">Over The Air 2012</a> - on of my favorite regular Hack days - and for the first time I decided to actually try and make a &#8220;native&#8221; mobile app.</p>
+
+<p>Seeing as I don&#8217;t want to have to redo the app for every platform I decided to try out one of the more famous cross platform development frameworks: <a href="http://phonegap.com/">PhoneGap</a>.</p>
+
+<p>Here are some of the things I discovered during the weekend:</p>
+
+<ul>
+<li>PhoneGap isn&#8217;t really a framework. It&#8217;s really nothing more than a wrapper around a local HTML page with an extra JS library to access native features like the camera, local storage, etc.</li>
+<li>Although <a href="http://jquerymobile.com/">jQuery Mobile</a> looks very nice, it seems to emulate iOS, making it look out of place on any Android or Windows device.</li>
+<li>PhoneGap in combination with jQuery Mobile allows you to very quickly make a static native app, but as soon as you want to add any dynamics it seems to become quite hard. You will need some kind of JS MVC to tie it all together.</li>
+<li>I had a play with <a href="http://knockoutjs.com/">KnockoutJS</a> - which we already use at <a href="http://emberads.com">EmberAds</a> - but it had its issues:
+
+<ul>
+<li>Good tutorials on how to integrate with jQuery Mobile were missing, and I was encountering rendering issues.</li>
+<li>It&#8217;s not really a MVC, and tying it to template partials seemed harder than it should.</li>
+<li>Automatic storage of models to local storage/server was missing.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>So although I&#8217;m happy with the work we did on the first version of our app it clearly will need a rewrite in time to be viable. Here&#8217;s some of the research I&#8217;ve done so far:</p>
+
+<ul>
+<li>I will probably replace Knockout with <a href="http://backbonejs.org/">BackboneJS</a> which seems to be more flexible and actually support storing to server and/or local storage.</li>
+<li>Alternatively I might look at <a href="http://docs.sencha.com/touch/2-0/">Sensa Touch 2.0</a> which seems to be more than just a UI framework but actually also include a full MVC framework.</li>
+<li>I found some tutorial describing how to integrate PhoneGap, jQuery Mobile, and Backbone, <a href="https://github.com/ccoenraets/backbone-directory/tree/master/jquerymobile">including a bootstrapped app</a> that integrates them all in a way I might be able to re-use.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OpenCodeCamp - Where the best of HackDays and BarCamps come together]]></title>
